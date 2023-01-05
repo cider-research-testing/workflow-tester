@@ -52,7 +52,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # List webhook
-      - name: Create Webhook
+      - name: List Webhookw
         run: |
            gh api /repos/$OWNER/$REPO/hooks 
         env:
