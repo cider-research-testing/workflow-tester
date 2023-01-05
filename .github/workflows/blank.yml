@@ -36,8 +36,18 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: gh issue comment $ISSUE --body "Thank you for opening this issue!"
+      - name: Create Issue
+        run: |
+            numOpenIssues="$(gh api graphql -F owner=$OWNER -F name=$REPO -f query='
+            query($name: String!, $owner: String!) {
+              repository(owner: $owner, name: $name) {
+                issues(states:OPEN){
+                  totalCount
+                }
+              }
+            }
+            ' --jq '.data.repository.issues.totalCount')"
+            echo 'NUM_OPEN_ISSUES='$numOpenIssues >> $GITHUB_ENV
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE: ${{ github.event.issue.html_url }}
