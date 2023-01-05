@@ -43,7 +43,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Create Issue
         run: |
-            numOpenIssues="$(gh api graphql -F owner=env.OWNER -F name=env.REPO -f query='
+            numOpenIssues="$(gh api graphql -F owner=$OWNER -F name=$REPO -f query='
             query($name: String!, $owner: String!) {
               repository(owner: $owner, name: $name) {
                 issues(states:OPEN){
