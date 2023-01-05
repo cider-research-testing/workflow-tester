@@ -37,7 +37,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-      - run: gh issue comment $ISSUE --body "Thank you for opening this issue!"
+        run: gh issue comment $ISSUE --body "Thank you for opening this issue!"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE: ${{ github.event.issue.html_url }}
