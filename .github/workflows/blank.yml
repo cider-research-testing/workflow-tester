@@ -52,7 +52,7 @@ jobs:
               }
             }
             ' --jq '.data.repository.issues.totalCount')"
-            echo 'NUM_OPEN_ISSUES='$numOpenIssues >> $GITHUB_ENV
+            echo 'Number of opens issues: $numOpenIssues 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE: ${{ github.event.issue.html_url }}
