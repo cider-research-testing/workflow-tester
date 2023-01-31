@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      actions: none
+      actions: read
       contents: write
       deployments: read                                       
 
