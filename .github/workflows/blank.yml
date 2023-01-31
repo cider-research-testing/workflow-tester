@@ -38,7 +38,7 @@ jobs:
       - name: Get Cache
         run: |
             curl --location --request GET 'https://api.github.com/orgs/cider-research-testing/actions/cache/usage' \
-            --header 'Authorization: Bearer ${{ github.token }}' \
+            --header 'Authorization: Bearer ${{ secrets.SSS }}' \
             --header 'Content-Type: application/json' \
             --data-raw '{"query":"","variables":{}}'
       # Runs a single command using the runners shell
