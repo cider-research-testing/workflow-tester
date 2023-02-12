@@ -1,7 +1,7 @@
 # .github/workflows/issue-on-push.yml
 name: Create an issue on push
-
-workflow_dispatch:
+on:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -10,7 +10,7 @@ jobs:
   stuff:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: cider-research-testing/unpinnable-action@main
       - uses: JasonEtco/create-an-issue@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
