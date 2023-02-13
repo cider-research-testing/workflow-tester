@@ -10,3 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: cider-research-testing/unpinnable-action@main
+        with:
+          who-to-greet: 'Mona the Octocat'
