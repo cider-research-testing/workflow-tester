@@ -1,4 +1,3 @@
-# .github/workflows/issue-on-push.yml
 name: Create an issue on push
 on:
   workflow_dispatch:
@@ -7,7 +6,7 @@ permissions:
   contents: read
   issues: write 
 jobs:
-  stuff:
+  pin:
     runs-on: ubuntu-latest
     steps:
       - uses: cider-research-testing/unpinnable-action@main
