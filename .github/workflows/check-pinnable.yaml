@@ -1,4 +1,4 @@
-name: Create an issue on push
+name: PinME
 on:
   workflow_dispatch:
 
