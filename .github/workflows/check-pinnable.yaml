@@ -9,6 +9,6 @@ jobs:
   pin:
     runs-on: ubuntu-latest
     steps:
-      - uses: cider-research-testing/unpinnable-action@main
+      - uses: cider-research-testing/unpinnable-action@09e1b495bbadc6d9ce67c0ccb475025defc80de8
         with:
           who-to-greet: 'Mona the Octocat'
