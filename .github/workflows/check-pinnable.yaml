@@ -12,3 +12,7 @@ jobs:
       - uses: cider-research-testing/unpinnable-action@09e1b495bbadc6d9ce67c0ccb475025defc80de8
         with:
           who-to-greet: 'Mona the Octocat'
+                  
+      - uses: wei/curl@master
+        with:
+          args: https://httpbin.org/get
