@@ -13,6 +13,3 @@ jobs:
         with:
           who-to-greet: 'Mona the Octocat'
                   
-      - uses: wei/curl@master
-        with:
-          args: https://httpbin.org/get
