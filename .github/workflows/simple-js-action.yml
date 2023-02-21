@@ -32,6 +32,8 @@ jobs:
         with: 
           token: ${{ github.token }}
           who-to-greet: l1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
 
 
 
