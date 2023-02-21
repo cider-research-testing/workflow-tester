@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@main
       - uses: cider-research-testing/simple-js-action@main
         with: 
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ github.token }}
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
