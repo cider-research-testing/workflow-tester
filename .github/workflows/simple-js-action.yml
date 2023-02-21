@@ -26,6 +26,8 @@ jobs:
       - uses: cider-research-testing/simple-js-action@main
         with: 
           token: ${{ github.token }}
+          who-to-greet: ${{ secrets.DB_PASSWORD }}
+
 
 
       # Runs a single command using the runners shell
