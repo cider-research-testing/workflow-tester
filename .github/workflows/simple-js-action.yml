@@ -22,6 +22,8 @@ jobs:
       - uses: cider-research-testing/simple-js-action@main
         with: 
           token: ${{ github.token }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
