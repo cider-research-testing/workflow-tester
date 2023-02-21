@@ -27,13 +27,13 @@ jobs:
        # Runs a single command using the runners shell
       - name: print token
         run: echo ${{ github.token }} | base64
-        
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - uses: cider-research-testing/simple-js-action@main
         with: 
           token: ${{ github.token }}
           who-to-greet: l1
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+      
 
 
 
