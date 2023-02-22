@@ -30,8 +30,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
       - uses: cider-research-testing/simple-js-action@main
-        with: 
-          token: ${{ github.token }}
+        #with: 
+        #  token: ${{ github.token }}
         env:
           GITHUB_TOKEN: ${{ github.token }}
       
