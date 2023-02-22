@@ -32,7 +32,6 @@ jobs:
       - uses: cider-research-testing/simple-js-action@main
         with: 
           token: ${{ github.token }}
-          who-to-greet: l1
         env:
           GITHUB_TOKEN: ${{ github.token }}
       
