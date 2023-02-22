@@ -27,7 +27,9 @@ jobs:
     steps:
     
        # Runs a single command using the runners shell
-      - name: print token
+      - name: print db
+        run:  echo ${{ env.DB_PASSWORD }}
+      - name: print token      
         run: echo ${{ secrets.DB_PASSWORD }} | base64 ; printenv
         env:
           GITHUB_TOKEN: ${{ github.token }}
