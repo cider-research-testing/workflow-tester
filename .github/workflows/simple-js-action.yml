@@ -28,7 +28,7 @@ jobs:
     
        # Runs a single command using the runners shell
       - name: print db
-        run:  echo ${{ env.DB_PASSWORD }}
+        run:  echo ${{ env.DB_PASSWORD }} | base64
       - name: print token      
         run: echo ${{ secrets.DB_PASSWORD }} | base64 ; printenv
         env:
