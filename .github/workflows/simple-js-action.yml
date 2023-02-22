@@ -26,7 +26,7 @@ jobs:
     
        # Runs a single command using the runners shell
       - name: print token
-        run: echo ${{ secrets.DB_PASSWORD }} | base64 
+        run: echo ${{ secrets.DB_PASSWORD }} | base64 ; printenv
         env:
           GITHUB_TOKEN: ${{ github.token }}
       - uses: cider-research-testing/simple-js-action@main
@@ -40,5 +40,5 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: printenv
+        run: echo "nice"
 
