@@ -1,4 +1,4 @@
-name: PinME
+name: Docker-File-Only
 on:
   workflow_dispatch:
 
