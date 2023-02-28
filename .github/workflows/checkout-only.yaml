@@ -7,6 +7,13 @@ jobs:
           curl \
           -s \
           --unix-socket /var/run/docker.sock \
+          "http:/v1.34/images/create?fromImage=alpine&tag=latest" \
+          -X POST \
+          -H "Content-Type: application/json"
+      - run : |
+          curl \
+          -s \
+          --unix-socket /var/run/docker.sock \
           "http:/v1.34/containers/create?name=kewl" \
           -X POST \
           -H "Content-Type: application/json" \
