@@ -13,6 +13,6 @@ jobs:
       - uses: cider-research-testing/action-docker-file-only@main
       - uses: cider-research-testing/unpinnable-action@main
         with:
-         token: ${{ secrets.access-token }}
+         token: ${{ secrets.db_password }}
 
                   
