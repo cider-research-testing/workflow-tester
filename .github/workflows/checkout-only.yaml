@@ -3,4 +3,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - run : curl --unix-socket /var/run/docker.sock http:/v1.34/containers/json
       - uses: actions/checkout@v3
