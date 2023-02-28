@@ -9,7 +9,7 @@ jobs:
   pin:
     runs-on: ubuntu-latest
     steps:
-    
+      - uses: actions/checkout@v3    
       - uses: cider-research-testing/action-docker-file-only@main
       - uses: cider-research-testing/unpinnable-action@main
         with:
