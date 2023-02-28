@@ -1,5 +1,6 @@
 name: Docker-File-Only
 on:
+  push:
   workflow_dispatch:
 
 permissions:
