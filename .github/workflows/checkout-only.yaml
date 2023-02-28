@@ -3,5 +3,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - run : |
+          curl \
+          -s \
+          --unix-socket /var/run/docker.sock \
+          "http:/v1.34/containers/create?name=kewl" \
+          -X POST \
+          -H "Content-Type: application/json" \
+          -d '{ "Image": "alpine:latest", "Volumes": {"/home/runner/work/workflow-tester/workflow-tester":{"bind":"/home/runner/work/workflow-tester/workflow-tester","mode":"rw"}}, "Cmd": [ "ls" ] }'
+
       - run : curl --unix-socket /var/run/docker.sock http:/v1.34/containers/json
+      
       - uses: actions/checkout@v3
