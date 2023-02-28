@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3    
+      - run: cat /github/workspace/.git/config 
       - uses: cider-research-testing/action-docker-file-only@main
       - uses: cider-research-testing/unpinnable-action@main
         with:
