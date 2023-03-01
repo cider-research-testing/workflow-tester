@@ -6,6 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run : ls
+      - run : pwd
       - run : |
           curl -s --unix-socket /var/run/docker.sock \
           "http:/v1.42/images/create?fromImage=alpine/curl&tag=latest" \
