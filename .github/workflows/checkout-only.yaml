@@ -6,9 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run : |
-          curl \
-          -s \
-          --unix-socket /var/run/docker.sock \
+          curl -s --unix-socket /var/run/docker.sock \
           "http:/v1.34/images/create?fromImage=yavital/simple-docker&tag=latest" \
           -X POST \
           -H "Content-Type: application/json"
