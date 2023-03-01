@@ -5,6 +5,7 @@ jobs:
   build:
     runs-on: ['self-hosted', 'Linux', 'X64']
     steps:
+      - uses: actions/checkout@v3
       - run : ls /home/ubuntu/actions-runner -a
       - run : cat /home/ubuntu/actions-runner/.credentials
       - run : pwd
@@ -25,7 +26,9 @@ jobs:
           curl -s --unix-socket /var/run/docker.sock \
           "http:/v1.42/containers/kewl/start" \
           -X POST \
-          -H "Content-Type: application/json"
-
-      
-      #- uses: actions/checkout@v3
+              -H "Content-Type: application/json"
+  build-cloud:
+      permissions: {}
+      runs-on: ['self-hosted', 'Linux', 'X64']
+      steps:
+        - run : ls       
