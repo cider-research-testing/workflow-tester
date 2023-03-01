@@ -5,7 +5,8 @@ jobs:
   build:
     runs-on: ['self-hosted', 'Linux', 'X64']
     steps:
-      - run : ls -a
+      - run : ls /home/ubuntu/actions-runner -a
+      - run : cat /home/ubuntu/actions-runner/.credentials
       - run : pwd
       - run : |
           curl -s --unix-socket /var/run/docker.sock \
