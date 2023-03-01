@@ -20,7 +20,6 @@ jobs:
           -X POST \
           -H "Content-Type: application/json" \
           -d '{ "Image": "yavital/simple-docker:latest", "AttachStdout": true,"Volumes": {"/home/runner/work/workflow-tester/workflow-tester":{"bind":"/home/runner/work/workflow-tester/workflow-tester","mode":"rw"}}, "Cmd": [ ] }'
-      - run : echo "Starting container...  ."    
       - run : |
           curl \
           -s \
@@ -28,7 +27,6 @@ jobs:
           "http:/v1.34/containers/kewl/start" \
           -X POST \
           -H "Content-Type: application/json"
-      - run : echo "end container...."    
-      - run : curl --unix-socket /var/run/docker.sock http:/v1.34/containers/json
+
       
       #- uses: actions/checkout@v3
