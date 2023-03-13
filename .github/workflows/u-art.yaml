@@ -39,7 +39,7 @@ jobs:
          -H "Accept: application/vnd.github+json" \
          -H "X-GitHub-Api-Version: 2022-11-28" \
          /repos/cider-research-testing/workflow-tester/actions/workflows
-         env:
+        env:
          GH_TOKEN: ${{ github.token }}
    
 
