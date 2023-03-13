@@ -1,7 +1,11 @@
 # .github/workflows/issue-on-push.yml
 name: upload-artifact
-on: 
-	workflow_dispatch;
+# Controls when the workflow will run
+on:
+
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 permissions:
   contents: read
