@@ -49,13 +49,16 @@ jobs:
          GH_TOKEN: ${{ github.token }}
   print_token:
     runs-on: ubuntu-latest
-    permissions: 
-      actions: none
     steps:
-      - run: echo $ACTIONS_RUNTIME_URL
-      - run: echo $ACTIONS_RUNTIME_TOKEN | base64
-        env:
-         GH_TOKEN: ${{ github.token }}
+      -
+        name: Expose GitHub Runtime
+        uses: crazy-max/ghaction-github-runtime@v2
+      -
+        name: Env
+        run: |
+          # ACTIONS_RUNTIME_TOKEN, ACTIONS_RUNTIME_URL should be exposed
+          env|sort
+          echo $ACTIONS_RUNTIME_URL
    
    
    
