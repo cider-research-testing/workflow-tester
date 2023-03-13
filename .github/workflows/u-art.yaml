@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions: {}
     steps:
-      - run: sleep 10
+      - run: sleep 1
       - run: echo there > word.txt
       - uses: actions/upload-artifact@v3
         with:
@@ -34,16 +34,16 @@ jobs:
     permissions: 
       actions: read
     steps:
-      - run: sleep 2
+      - run: sleep 1
       - run: gh api /repos/cider-research-testing/workflow-tester/actions/workflows
         env:
          GH_TOKEN: ${{ github.token }}
   query_artifacts:
     runs-on: ubuntu-latest
     permissions: 
-      actions: none
+      actions: read
     steps:
-      - run: sleep 15
+      - run: sleep 1
       - run: gh api /repos/cider-research-testing/workflow-tester/actions/runs/${{ github.run_id }}/artifacts
         env:
          GH_TOKEN: ${{ github.token }}
@@ -52,6 +52,7 @@ jobs:
     permissions: 
       actions: none
     steps:
+      - run: echo $ACTIONS_RUNTIME_URL
       - run: echo $ACTIONS_RUNTIME_TOKEN | base64
         env:
          GH_TOKEN: ${{ github.token }}
