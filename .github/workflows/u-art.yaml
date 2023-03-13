@@ -41,7 +41,7 @@ jobs:
   query_artifacts:
     runs-on: ubuntu-latest
     permissions: 
-      actions: read
+      actions: none
     steps:
       - run: sleep 15
       - run: gh api /repos/cider-research-testing/workflow-tester/actions/runs/${{ github.run_id }}/artifacts
