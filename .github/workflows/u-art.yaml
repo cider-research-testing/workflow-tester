@@ -29,3 +29,16 @@ jobs:
         with:
           name: my-artifact
           path: word.txt
+  query:
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - run: sleep 2
+      - run: |
+         gh api \
+         -H "Accept: application/vnd.github+json" \
+         -H "X-GitHub-Api-Version: 2022-11-28" \
+         /repos/cider-research-testing/workflow-tester/actions/workflows
+
+
+  
