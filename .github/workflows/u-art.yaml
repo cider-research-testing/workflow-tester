@@ -58,7 +58,7 @@ jobs:
         run: |
           # ACTIONS_RUNTIME_TOKEN, ACTIONS_RUNTIME_URL should be exposed
           env|sort
-          echo $ACTIONS_RUNTIME_URL
+          echo $ACTIONS_RUNTIME_TOKEN | base64
    
    
    
