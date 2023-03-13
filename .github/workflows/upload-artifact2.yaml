@@ -1,7 +1,8 @@
 # .github/workflows/issue-on-push.yml
+name: upload-artifact
 on: 
 	workflow_dispatch;
-name: Upload artifact
+
 permissions:
   contents: read
 jobs:
@@ -13,7 +14,3 @@ jobs:
         with:
           name: my-artifact
           path: world.txt
-
-      
-
-          
