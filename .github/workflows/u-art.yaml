@@ -19,3 +19,12 @@ jobs:
         with:
           name: my-artifact
           path: word.txt
+  stuff2:
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - run: echo there > word.txt
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: word.txt
