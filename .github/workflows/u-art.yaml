@@ -31,7 +31,8 @@ jobs:
           path: word.txt
   query:
     runs-on: ubuntu-latest
-    permissions: actions :read
+    permissions: 
+      actions :read
     steps:
       - run: sleep 2
       - run: gh api /repos/cider-research-testing/workflow-tester/actions/workflows
