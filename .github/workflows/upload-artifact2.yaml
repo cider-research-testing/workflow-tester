@@ -1,5 +1,6 @@
 # .github/workflows/issue-on-push.yml
-on: [worlflow_dispatch]
+on: 
+	worlflow_dispatch;
 name: Upload artifact
 permissions:
   contents: read
