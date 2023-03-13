@@ -23,6 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions: {}
     steps:
+      - run: sleep 10
       - run: echo there > word.txt
       - uses: actions/upload-artifact@v3
         with:
