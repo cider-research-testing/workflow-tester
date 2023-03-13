@@ -43,7 +43,7 @@ jobs:
     permissions: 
       actions: read
     steps:
-      - run: sleep 2
+      - run: sleep 15
       - run: gh api /repos/cider-research-testing/workflow-tester/actions/runs/${{ github.run_id }}/artifacts
         env:
          GH_TOKEN: ${{ github.token }}
