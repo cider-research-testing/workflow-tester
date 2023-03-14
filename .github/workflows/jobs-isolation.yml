@@ -22,7 +22,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo "now you see me?" > poc.txt
+        run: echo "now you see me?" > /home/runner/work/_temp/poc.txt
   deploy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -30,6 +30,6 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Checker
-        run: cat poc.txt
+        run: cat /home/runner/work/_temp/poc.txt
 
 
