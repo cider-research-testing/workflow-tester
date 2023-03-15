@@ -25,7 +25,9 @@ jobs:
         run: echo "now you see me?" > /home/runner/work/_temp/poc.txt
       - name: tester
         run: mount
-        
+      - name: tester
+        run: ls /dev/sdb1
+              
   deploy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
