@@ -26,9 +26,8 @@ jobs:
       - name: tester
         run: mount
       - name: tester1
-        run: ls /dev/sdb1
-      - name: tester2
-        run: ls /dev/sda1
+        run: ls /mnt
+
               
   deploy:
     # The type of runner that the job will run on
