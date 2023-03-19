@@ -17,5 +17,8 @@ jobs:
       - uses: cider-research-testing/unpinnable-action@main
         with:
          token: ${{ secrets.db_password }}
+      - name: Slack Notify
+        uses: rtCamp/action-slack-notify@v2.2.0
+
 
                   
