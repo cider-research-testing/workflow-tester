@@ -1,4 +1,4 @@
-name: check-pinnable-docker-file-only.yaml
+name: my-ci
 on:
   push:
   workflow_dispatch:
