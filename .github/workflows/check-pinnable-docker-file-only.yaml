@@ -11,15 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c    
-      - run: pwd
-      #- run: cat .git/config
-      - uses: cider-research-testing/action-docker-file-only@main
-      - uses: cider-research-testing/unpinnable-action@main
+      - uses: cider-research-testing/unpinnable-action@809b27f9d264dcc93f0984fe025697b52f49eccf
         with:
          token: ${{ secrets.db_password }}
-      - name: Labeler
-        uses: actions/labeler@v4.0.3
-
-
-
-                  
