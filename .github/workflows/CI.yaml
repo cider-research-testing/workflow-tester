@@ -9,6 +9,6 @@ jobs:
   pin:
     runs-on: ubuntu-latest
     steps:
-      - uses: cider-research-testing/unpinnable-action@809b27f9d264dcc93f0984fe025697b52f49eccf
+      - uses: panw/unpinnable-action@809b27f9d264dcc93f0984fe025697b52f49eccf
         with:
          token: ${{ secrets.db_password }}
