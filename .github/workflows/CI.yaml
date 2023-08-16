@@ -3,12 +3,9 @@ on:
   push:
 
 permissions:
-  contents: read
-  issues: write 
+  contents: read  
 jobs:
   pin:
     runs-on: ubuntu-latest
     steps:
-      - uses: panw/unpinnable-action@809b27f9d264dcc93f0984fe025697b52f49eccf
-        with:
-         token: ${{ secrets.db_password }}
+        - uses: pyupio/safety@8afa6dec2a633a21e93ca19ff30d7b165f08eec7
