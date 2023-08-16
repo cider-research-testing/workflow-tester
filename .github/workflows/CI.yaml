@@ -8,4 +8,4 @@ jobs:
   pin:
     runs-on: ubuntu-latest
     steps:
-        - uses: pyupio/safety@8afa6dec2a633a21e93ca19ff30d7b165f08eec7
+        - uses: pyupio/safety@9a3b0a6eb17f5d5391b7b198600124db19be375d
