@@ -1,6 +1,7 @@
-name: U
+name: Upinnable
 on:
   push:
+  workflow_dispatch:
 
 permissions:
   contents: read
