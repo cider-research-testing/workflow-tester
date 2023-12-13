@@ -1,6 +1,7 @@
 name: U
 on:
   push:
+  workflow_dispatch:
 
 permissions:
   contents: read
